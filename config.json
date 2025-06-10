@@ -1,0 +1,39 @@
+{
+    "currency_symbol": "₹",
+    "stocks": [
+        {
+            "symbol": "STAR.NS",
+            "company_name": "Strides Pharma Science Limited",
+            "quantity_factor": 1150000,
+            "loan_outstanding": 480000000,
+            "security_cover_threshold": 1.7
+        }
+    ],
+    "email_sender": {
+        "from_email": "lasso24x7@mosaicbot.in",
+        "from_name": "Stock Watchdog",
+        "smtp_host": "smtp.hostinger.com",
+        "smtp_port": 587,
+        "smtp_username": "lasso24x7@mosaicbot.in",
+        "smtp_password": "",
+        "use_tls": true
+    },
+    "recipients": [
+        {
+            "name": "Aditi Deshpande",
+            "email": "aditi@mosaicamc.com",
+            "subscribed_symbols": ["STAR.NS"],
+            "cc": ["maneesh@mosaicamc.com", "satyam@mosaicamc.com"],
+            "bcc": [],
+            "alert_preferences": {
+                "scheduled_reports": true,
+                "threat_alerts": true,
+                "manual_alerts": true
+            }
+        }
+    ],
+    "schedule": {
+        "daily_reports": ["09:30", "12:30", "16:00"],
+        "timezone": "Asia/Kolkata"
+    }
+}

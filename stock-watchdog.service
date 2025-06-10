@@ -1,0 +1,22 @@
+[Unit]
+Description=Stock Price Watchdog Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=stockdog
+Group=stockdog
+WorkingDirectory=/opt/stock-watchdog
+Environment=PATH=/opt/stock-watchdog/.venv/bin
+Environment=PYTHONPATH=/opt/stock-watchdog
+ExecStart=/opt/stock-watchdog/.venv/bin/python /opt/stock-watchdog/main.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stock-watchdog
+
+[Install]
+WantedBy=multi-user.target
